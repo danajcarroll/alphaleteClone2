@@ -29,8 +29,12 @@
 :root {
     --darkWhite: #f4f4f4;
     --brightWhite: #FFFFFF;
-    --charcoalButton: rgba(230, 230, 230, 0.65);
+    --bannerButton: rgba(230, 230, 230, 0.65);
+    --purpleButton: rgba(139, 105, 233, 0.65);
+    --charcoalButton: rgba(51, 51, 51, 0.65);
     --charcoalText: #444444;
+    --whiteGrey: #dadada;
+    --lightGrey: #868686;
 }
 .logo, .subtitle, .sectionHeader, .miniHeading, .middleNav, .signUp, .boldPhrase {
     font-family: 'GT';
@@ -52,9 +56,23 @@
     }
     section {
         margin-bottom: 2rem;
+        /* padding: 2rem 1.25rem 2rem 1.25rem; */
+    }
+    .sectionHeader {
+        margin-bottom: 2rem;
     }
     .curvedCorners {
         border-radius: 1.5rem;
+    }
+    .dropShadow {
+        -webkit-box-shadow: 5px 5px 15px -3px #A1A1A1; 
+        box-shadow: 5px 5px 15px -3px #A1A1A1;
+    }
+    .bold {
+        font-family: 'Mont Bold';
+    }
+    .med {
+        font-family: 'Mont Medium';
     }
 
     /* ********** Nav ********** */
@@ -98,6 +116,12 @@
         width: 8vw;
         margin-left: 1rem;
     }
+    .spacedText {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
 
 
     /* ********** Banner ********** */
@@ -108,7 +132,6 @@
         aspect-ratio: 65/86;
         position: relative;
         overflow: hidden;
-
     }
     .videoWrapper {
         width: 100%;
@@ -158,11 +181,83 @@
         border-radius: 2rem;
     }
     .lightGrey {
-        background-color: var(--charcoalButton);
+        background-color: var(--bannerButton);
     }
 
     /* ********** Infinity ********** */
-    
+    .jacketContainer {
+        display: flex;
+        flex-wrap: nowrap;
+        /* overflow-x: auto; */
+    }
+    .jacketBox {
+        flex: 0 0 auto;
+        width: 90%;
+    }
+    .imageBox {
+        width: 90%;
+        aspect-ratio: 65/86;
+        background-color: pink;
+        overflow: hidden;
+        margin-bottom: 0.65rem;
+    }
+    .fillBackground {
+        top: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    /* INFO BOX */
+    .infoBox {
+        background-color: var(--darkWhite);
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        width: 90%;
+        font-size: 0.65rem;
+        height: 7rem;
+        justify-content: space-evenly;
+    }
+    .productTitle {
+        font-size: 0.8rem;
+    }
+    .colorInfo {
+        width: 100%;
+        display: flex;
+    }
+    .colorName {
+        color: var(--lightGrey);
+    }
+    .moreColors {
+        background-color: var(--whiteGrey);
+    }
+    .miniTag {
+        padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+        border-radius: 0.75rem;
+    }
+    .newTag {
+        background-color: var(--charcoalText);
+        color: var(--brightWhite);
+    }
+    /* ********** Category Showcase ********** */
+    .categoryBox {
+        width: 100%;
+        aspect-ratio: 65/86;
+        background-color: pink;
+        overflow: hidden;
+        margin-bottom: 0.65rem;
+        position: relative;
+    }
+    .purpleButton {
+        background-color: var(--purpleButton);
+    }
+    .charcoalButton {
+        background-color: var(--charcoalButton);
+    }
+
+
+
+
 
 
 }
